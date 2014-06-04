@@ -1,5 +1,4 @@
-src/mipssystemc.d: ../src/mipssystemc.cpp \
- /home/developer/.systemc/include/systemc.h \
+src/main.d: ../src/main.cpp /home/developer/.systemc/include/systemc.h \
  /home/developer/.systemc/include/systemc \
  /home/developer/.systemc/include/sysc/kernel/sc_cmnhdr.h \
  /home/developer/.systemc/include/sysc/packages/boost/config.hpp \
@@ -113,7 +112,8 @@ src/mipssystemc.d: ../src/mipssystemc.cpp \
  /home/developer/.systemc/include/sysc/utils/sc_utils_ids.h \
  /home/developer/.systemc/include/sysc/utils/sc_pvector.h \
  /home/developer/.systemc/include/sysc/utils/sc_vector.h \
- /home/developer/.systemc/include/sysc/packages/boost/utility/enable_if.hpp
+ /home/developer/.systemc/include/sysc/packages/boost/utility/enable_if.hpp \
+ ../src/AndGate.h ../src/AndGate.cpp
 
 /home/developer/.systemc/include/systemc.h:
 
@@ -344,3 +344,7 @@ src/mipssystemc.d: ../src/mipssystemc.cpp \
 /home/developer/.systemc/include/sysc/utils/sc_vector.h:
 
 /home/developer/.systemc/include/sysc/packages/boost/utility/enable_if.hpp:
+
+../src/AndGate.h:
+
+../src/AndGate.cpp:

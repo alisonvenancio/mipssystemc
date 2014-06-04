@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/mipssystemc.cpp 
+../src/AndGate.cpp \
+../src/main.cpp 
 
 OBJS += \
-./src/mipssystemc.o 
+./src/AndGate.o \
+./src/main.o 
 
 CPP_DEPS += \
-./src/mipssystemc.d 
+./src/AndGate.d \
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

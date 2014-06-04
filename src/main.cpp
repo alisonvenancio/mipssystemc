@@ -6,23 +6,29 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-// All systemc modules should include systemc.h header file
-#include "systemc.h"
-// Hello_world is module name
-SC_MODULE (hello_world) {
-	SC_CTOR (hello_world) {
-		// Nothing in constructor
-	}
-	void say_hello() {
-		//Print "Hello World" to the console.
-		cout << "Hello World.\n";
-	}
-};
-
-// sc_main in top level function like in C++ main
+#include <systemc.h>
+#include <cassert>
+#include <iostream>
+#include "AndGate.h"
 int sc_main(int argc, char* argv[]) {
-	hello_world hello("HELLO");
-	// Print the hello world
-	hello.say_hello();
-	return (0);
+
+	sc_signal<bool> s1;
+	sc_signal<bool> s2;
+	sc_signal<bool> s3;
+
+	std::cout << "TESTE";
+	s1.write(true);
+	s2.write(true);
+	s3.write(false);
+
+	and_gate and_gate("and_gate");
+	and_gate.a(s1);
+	and_gate.b(s2);
+	and_gate.c(s3);
+
+	and_gate.and_process();
+	and_gate.test_process();
+
+//	sc_start(100);
+	return 0;
 }
